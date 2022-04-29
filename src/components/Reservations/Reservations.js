@@ -1,6 +1,6 @@
-import './ReservationList.scss';
+import './Reservations.scss';
 
-const ReservationList = ({ $main }) => {
+const Reservations = ({ $main, data }) => {
 	const $listContainer = document.createElement('ul');
 	$listContainer.className = 'listContainer';
 	$listContainer.innerHTML = `dddd`;
@@ -8,4 +8,4 @@ const ReservationList = ({ $main }) => {
 	$main.appendChild($listContainer);
 };
 
-export default ReservationList;
+export default Reservations;
