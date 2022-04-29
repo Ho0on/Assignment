@@ -1,0 +1,22 @@
+.reserveItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	padding: 20px 30px;
+	line-height: 30px;
+
+	.timeStatus {
+		flex-basis: 10%;
+	}
+
+	.itemInfo {
+		flex-basis: 90%;
+		padding-left: 40px;
+	}
+
+	.statusBtn {
+	}
+}
