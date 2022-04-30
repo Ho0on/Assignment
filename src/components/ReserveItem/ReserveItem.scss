@@ -9,14 +9,35 @@
 	line-height: 30px;
 
 	.timeStatus {
-		flex-basis: 10%;
+		width: 90px;
+		text-align: center;
 	}
 
 	.itemInfo {
-		flex-basis: 90%;
-		padding-left: 40px;
+		width: calc(100% - 200px);
+		padding: 0px 20px;
 	}
 
 	.statusBtn {
+		width: 80px;
+		padding: 10px;
+		font-size: 18px;
+		border-radius: 7px;
+		outline: none;
+		border: 2px solid #162149;
+		background-color: #162149;
+		color: white;
+
+		&:hover {
+			border: 2px solid #162149;
+			background-color: white;
+			color: #162149;
+		}
+	}
+
+	.ellipsis {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 	}
 }

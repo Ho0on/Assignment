@@ -17,7 +17,6 @@ const ReserveDetail = ({ $reserveContainer }) => {
 			<p><span>예약 상태</span>value</p>
 			</div>	
 		<p class='request'><span>예약 상태</span>value</p>
-		
 	`;
 
 	$reserveContainer.appendChild($detailContainer);
