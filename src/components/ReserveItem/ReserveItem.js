@@ -3,8 +3,12 @@ import './ReserveItem.scss';
 
 const ReserveItem = ({ $reserveList, item, handleSelect, handleRemove }) => {
 	const { id, customer, menus, status, tables, timeReserved } = item;
+
+	const $statusBtn = document.createElement('button');
 	const $reserveItem = document.createElement('li');
+	$statusBtn.className = 'statusBtn';
 	$reserveItem.className = 'reserveItem';
+	$statusBtn.innerHTML = btnStatusFormat(status);
 	$reserveItem.innerHTML = `
 		<div class='timeStatus'>
 			<p>${timeFormatting(timeReserved)}</p>
@@ -19,18 +23,25 @@ const ReserveItem = ({ $reserveList, item, handleSelect, handleRemove }) => {
 		</div>
 	`;
 
-	const $statusBtn = document.createElement('button');
-	$statusBtn.className = 'statusBtn';
-	$statusBtn.innerHTML = btnStatusFormat(status);
-	$reserveItem.appendChild($statusBtn);
-
 	$statusBtn.addEventListener('click', e => {
 		e.stopPropagation();
 		e.target.innerText === '착석' ? (e.target.innerText = '퇴석') : handleRemove(item.id);
 	});
 
-	$reserveItem.addEventListener('click', () => handleSelect(item.id));
+	$reserveItem.addEventListener('click', () => {
+		handleSelect(item.id);
 
+		if (document.documentElement.clientWidth < 1024) {
+			const $detail = document.querySelector('.detailContainer');
+			const $mask = document.querySelector('.mask');
+
+			$mask.style.display = 'block';
+			$detail.style.display = 'block';
+			$detail.style.animation = 'fadeUp 0.2s ease-out';
+		}
+	});
+
+	$reserveItem.appendChild($statusBtn);
 	$reserveList.appendChild($reserveItem);
 };
 

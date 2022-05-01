@@ -3,6 +3,10 @@ import './ReserveDetail.scss';
 const ReserveDetail = ({ $reserveContainer, data }) => {
 	const { status, timeReserved, timeRegistered, customer } = data;
 
+	const $mask = document.querySelector('.mask');
+	const $closeBtn = document.createElement('button');
+	$closeBtn.className = 'closeBtn';
+	$closeBtn.innerText = '닫기';
 	const $detailContainer = document.createElement('div');
 	$detailContainer.className = 'detailContainer';
 	$detailContainer.innerHTML = `
@@ -24,6 +28,15 @@ const ReserveDetail = ({ $reserveContainer, data }) => {
 		<p class='request'><span>요청 사항</span>${customer.request}</p>
 	`;
 
+	const closeDetail = () => {
+		$detailContainer.style.display = 'none';
+		$mask.style.display = 'none';
+	};
+
+	$mask.addEventListener('click', closeDetail);
+	$closeBtn.addEventListener('click', closeDetail);
+
+	$detailContainer.appendChild($closeBtn);
 	$reserveContainer.appendChild($detailContainer);
 };
 

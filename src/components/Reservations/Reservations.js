@@ -10,6 +10,8 @@ const Reservations = ({ $main, data }) => {
 
 	let filteredList = [...data];
 
+	const clientWidth = document.documentElement.clientWidth;
+
 	const renderReserveList = newData => {
 		newData.map(item => {
 			item.status !== 'done' && new ReserveItem({ $reserveList, item, handleSelect, handleRemove });
