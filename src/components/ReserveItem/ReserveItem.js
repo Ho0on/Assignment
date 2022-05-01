@@ -1,7 +1,7 @@
 import { btnStatusFormat, reserveStatusFormat, timeFormatting } from '../../utils/formatting';
 import './ReserveItem.scss';
 
-const ReserveItem = ({ $reserveList, item }) => {
+const ReserveItem = ({ $reserveList, item, handleSelect, handleRemove }) => {
 	const { id, customer, menus, status, tables, timeReserved } = item;
 	const $reserveItem = document.createElement('li');
 	$reserveItem.className = 'reserveItem';
@@ -18,6 +18,7 @@ const ReserveItem = ({ $reserveList, item }) => {
 			</p>
 		</div>
 	`;
+
 	const $statusBtn = document.createElement('button');
 	$statusBtn.className = 'statusBtn';
 	$statusBtn.innerHTML = btnStatusFormat(status);
@@ -25,9 +26,10 @@ const ReserveItem = ({ $reserveList, item }) => {
 
 	$statusBtn.addEventListener('click', e => {
 		e.stopPropagation();
-
-		e.target.innerText === '착석' ? (e.target.innerText = '퇴석') : '';
+		e.target.innerText === '착석' ? (e.target.innerText = '퇴석') : handleRemove(item.id);
 	});
+
+	$reserveItem.addEventListener('click', () => handleSelect(item.id));
 
 	$reserveList.appendChild($reserveItem);
 };

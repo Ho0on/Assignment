@@ -15,7 +15,9 @@
 
 	.info {
 		padding: 30px 0;
+
 		& > p {
+			display: flex;
 			margin-bottom: 20px;
 			font-size: 18px;
 
@@ -23,20 +25,25 @@
 				margin-bottom: 0;
 			}
 
-			& > span {
+			& > span:first-child {
 				color: #808080;
-				margin-right: 60px;
+				flex-basis: 30%;
+			}
+
+			.memo {
+				width: 300px;
 			}
 		}
 	}
 
 	.request {
+		display: flex;
 		font-size: 18px;
 		margin-top: 40px;
 
 		& > span {
+			flex-basis: 30%;
 			color: #808080;
-			margin-right: 60px;
 		}
 	}
 }
