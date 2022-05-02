@@ -5,6 +5,11 @@
 [🔗 Netlify 배포 링크](https://precious-unicorn-f77258.netlify.app/)
 
   <br>
+  
+## 🖥 구현 화면
+![May-02-2022 23-30-35](https://user-images.githubusercontent.com/88081661/166251918-9b28660a-2fcd-4fdd-99ee-b36c20298e4f.gif)
+
+ <br>
 
 ## ✅ 구현 사항
 
