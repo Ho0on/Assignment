@@ -10,8 +10,8 @@
 
 	.timeStatus {
 		width: 60px;
-		text-align: center;
 		font-size: 18px;
+		text-align: center;
 
 		.seated {
 			color: #162149;
@@ -30,11 +30,11 @@
 	.statusBtn {
 		width: 90px;
 		padding: 10px;
-		font-size: 16px;
+		border: 2px solid #162149;
 		border-radius: 7px;
 		outline: none;
-		border: 2px solid #162149;
 		background-color: #162149;
+		font-size: 16px;
 		color: white;
 
 		&:hover {
@@ -54,10 +54,11 @@
 @media (max-width: 512px) {
 	.reserveItem {
 		padding: 15px;
+
 		.timeStatus {
 			width: 50px;
-			text-align: center;
 			font-size: 14px;
+			text-align: center;
 		}
 
 		.itemInfo {

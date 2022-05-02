@@ -1,7 +1,7 @@
 import Reservations from './components/Reservations/Reservations.js';
+import { getAPI } from './utils/getAPI.js';
 import './style/reset.scss';
 import './style/common.scss';
-import { getAPI } from './utils/getAPI.js';
 
 const App = ({ $target }) => {
 	const $main = document.createElement('div');
@@ -11,7 +11,8 @@ const App = ({ $target }) => {
 	$mask.className = 'mask';
 
 	const reservationView = async () => {
-		const data = await getAPI();
+		const data = await getAPI('https://frontend.tabling.co.kr/v1/store/9533/reservations');
+
 		new Reservations({ $main, data });
 	};
 

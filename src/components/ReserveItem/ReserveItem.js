@@ -25,11 +25,11 @@ const ReserveItem = ({ $reserveList, item, handleSelect, handleRemove }) => {
 
 	$statusBtn.addEventListener('click', e => {
 		e.stopPropagation();
-		e.target.innerText === '착석' ? (e.target.innerText = '퇴석') : handleRemove(item.id);
+		e.target.innerText === '착석' ? (e.target.innerText = '퇴석') : handleRemove(id);
 	});
 
 	$reserveItem.addEventListener('click', () => {
-		handleSelect(item.id);
+		handleSelect(id);
 
 		if (document.documentElement.clientWidth < 1024) {
 			const $detail = document.querySelector('.detailContainer');

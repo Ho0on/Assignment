@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export const getAPI = async () => {
+export const getAPI = async apiAddress => {
 	try {
-		const { data } = await axios.get('https://frontend.tabling.co.kr/v1/store/9533/reservations');
+		const { data } = await axios.get(apiAddress);
 		return data.reservations;
 	} catch (error) {
 		throw Error(error);
