@@ -2,13 +2,13 @@
 	width: 100%;
 
 	.header {
-		font-size: 60px;
+		font-size: 40px;
 		margin: 50px 0;
 		text-align: center;
 	}
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
 	.mask {
 		display: none;
 		position: absolute;
@@ -24,7 +24,7 @@
 			height: 0px;
 		}
 		to {
-			height: 800px;
+			height: 550px;
 		}
 	}
 }

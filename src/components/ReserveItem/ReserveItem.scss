@@ -2,26 +2,35 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: white;
 	margin-bottom: 10px;
+	padding: 20px;
 	border-radius: 15px;
-	padding: 20px 30px;
+	background-color: white;
 	line-height: 30px;
 
 	.timeStatus {
-		width: 90px;
+		width: 60px;
 		text-align: center;
+		font-size: 18px;
+
+		.seated {
+			color: #162149;
+		}
+
+		.reserve {
+			color: #3bb94c;
+		}
 	}
 
 	.itemInfo {
-		width: calc(100% - 210px);
+		width: calc(100% - 200px);
 		padding: 0px 20px;
 	}
 
 	.statusBtn {
-		width: 80px;
+		width: 90px;
 		padding: 10px;
-		font-size: 18px;
+		font-size: 16px;
 		border-radius: 7px;
 		outline: none;
 		border: 2px solid #162149;
@@ -39,5 +48,27 @@
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+	}
+}
+
+@media (max-width: 512px) {
+	.reserveItem {
+		padding: 15px;
+		.timeStatus {
+			width: 50px;
+			text-align: center;
+			font-size: 14px;
+		}
+
+		.itemInfo {
+			width: calc(100% - 160px);
+			font-size: 14px;
+		}
+
+		.statusBtn {
+			width: 70px;
+			padding: 10px;
+			font-size: 14px;
+		}
 	}
 }

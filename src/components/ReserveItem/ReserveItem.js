@@ -12,7 +12,7 @@ const ReserveItem = ({ $reserveList, item, handleSelect, handleRemove }) => {
 	$reserveItem.innerHTML = `
 		<div class='timeStatus'>
 			<p>${timeFormatting(timeReserved)}</p>
-			<span>${reserveStatusFormat(status)}</span>
+			<span class=${status === 'seated' ? 'seated' : 'reserve'}>${reserveStatusFormat(status)}</span>
 		</div>
 		<div class='itemInfo'>
 			<p class='ellipsis'>${customer.name} - ${tables.map(table => ` ${table.name}`)}</p>
